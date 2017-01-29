@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
 
   constructor(private executor: ExecutorService) {
 
-    let first = new Terminal('First Tab', executor)
+    let first = new Terminal('Javascript', 'javascript', executor)
 
-    let second = new Terminal('Second Tab', executor)
+    let second = new Terminal('Coffeescript', 'coffeescript', executor)
 
     this.tabs = [first, second]
 

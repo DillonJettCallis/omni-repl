@@ -11,8 +11,8 @@ export class ExecutorService {
 
   }
 
-  createSession(): Observable<SessionResponse> {
-    return this.http.get('http://localhost:3500/session').map(result => result.json())
+  createSession(language: string): Observable<SessionResponse> {
+    return this.http.get(`http://localhost:3500/session/${language}`).map(result => result.json())
   }
 
   execute(request: ExecRequest): Observable<ExecResponse> {

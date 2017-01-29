@@ -6,8 +6,8 @@ export class Terminal {
 
   sessionId: string
 
-  constructor(public label: string, executor: ExecutorService) {
-    executor.createSession().subscribe(
+  constructor(public label: string, public language: string, executor: ExecutorService) {
+    executor.createSession(language).subscribe(
       body => this.sessionId = body.sessionId,
       error => console.log(error)
     )
