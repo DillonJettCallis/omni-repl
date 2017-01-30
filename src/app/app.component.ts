@@ -17,7 +17,11 @@ export class AppComponent implements OnInit {
 
     let second = new Terminal('Coffeescript', 'coffeescript', executor)
 
-    this.tabs = [first, second]
+    let third = new Terminal('Typescript', 'typescript', executor)
+
+    let fourth = new Terminal('Clojurescript', 'clojurescript', executor)
+
+    this.tabs = [first, second, third, fourth]
 
   }
 
